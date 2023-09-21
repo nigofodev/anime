@@ -8,40 +8,84 @@
 }
 
 body{
-    background-color: black;
+    background-color: #131313;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    width: 100%;
+    position: relative;
+}
+
+
 .list__container{
-    background-color: #2f353a;
+    background-color: #293035;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     height: 100px;
     align-items: center;
     list-style: none;
-    border-bottom: 1px solid grey;
+    text-decoration: none;
 }
 
-.list__container li:hover{
-    background-color: rgba(0, 0, 0, 0.219);
+.list__container::after{
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
 }
 
-.SignIn{
-    border: 2px solid white;
+.list__container:hover::after{
+    width: 100%;
+    right: 0;
+}
+
+
+.SignIn a{
+    border: 1px aqua solid;
     padding: 10px;
     border-radius: 15px;
     cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    height: 300px;
 }
 
-.anime__list{
-    border: 2px solid white;
+.SignIn a:hover{
+    transition: all .5s ease;
+    background-color: aqua;
+    color: black;
+}
+
+.home a{
+    border: 1px aqua solid;
     padding: 10px;
     border-radius: 15px;
-    cursor: pointer;    
+    cursor: pointer;
+    color: white;
+    font-weight: 500; 
     text-align: center;
+    text-decoration: none;
+}
+
+.home a:hover{
+    transition: all .5s ease;
+    background-color: aqua;
+    color: black;
 }
 
 .container input{
@@ -49,8 +93,9 @@ body{
     border-radius: 25px;
     height: 30px;
     padding: 15px;
-    border: 1px solid white;
+    border: 1px solid aqua;
     cursor: text;
+    color: white;
 }
 
 .container .Logo{
@@ -60,8 +105,7 @@ body{
     cursor: pointer;
 }
 
-
-.Naruto{
+#Naruto{
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://i.blogs.es/0cafeb/naruto/1366_2000.jpeg");
     background-position: center;
     background-repeat: no-repeat;
@@ -70,10 +114,21 @@ body{
     max-width: 1400px;
     justify-content: center;
     padding: 20px;
+    transition: all .5s ease-out;
     
 }
+#Naruto h2{
+    font-size: 3rem;
+}
 
-.Bleach{
+#Naruto:hover{
+    cursor: pointer;
+    width: 1400px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+#Bleach{
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://dw9to29mmj727.cloudfront.net/promo/2016/6389-Header_BleachTYBW_2000x800.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -82,9 +137,20 @@ body{
     max-width: 1400px;
     justify-content: center;
     padding: 20px;
+    transition: all .5s ease-out;
+}
+#Bleach h2{
+    font-size: 3rem;
 }
 
-.DragonBallZ{
+#Bleach:hover{
+    cursor: pointer;
+    width: 100%;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+#DragonBallZ{
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/4CC34NEJ2JGDVKFT6UKOPABAPE.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -93,9 +159,20 @@ body{
     max-width: 1400px;
     justify-content: center;
     padding: 20px;
+    transition: all .5s ease-out;
+}
+#DragonBallZ h2{
+    font-size: 3rem
 }
 
-.JJK{
+#DragonBallZ:hover{
+    cursor: pointer;
+    width: 1400px;
+    opacity: 5;
+    filter: contrast(120%);
+}
+
+#JJK{
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://cdn.vox-cdn.com/thumbor/OaLG8uG4V8Kgb4mKomOktrUgDD0=/0x50:1600x850/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/24762952/Jujutsu_Kaisen_season_2_01.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -104,6 +181,40 @@ body{
     max-width: 1400px;  
     justify-content: center;
     padding: 20px;
+    transition: all .5s ease-out;
+}
+
+#JJK h2{
+    font-size: 3rem;
+}
+
+
+#JJK:hover{
+    cursor: pointer;
+    width: 1380px;
+    opacity: 5;
+    filter: contrast(120%);
+}
+
+#Demon{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://wallpapers.com/images/hd/demon-slayer-pictures-tsbyd3y88kxirm15.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+    max-width: 1400px;  
+    justify-content: flex-end;
+    justify-content: center;
+    padding: 20px;
+    transition: all .5s ease-out;
+}
+
+#Demon h2{
+    font-size: 3rem;
+}
+
+#Demon:hover{
+    transform: scale(0.9) ;
 }
 
 
@@ -115,6 +226,7 @@ section{
     width: 100%;
     height: 400px;
     font-size: 1rem;
+    text-align: center;
 }
 
 section p{
@@ -130,8 +242,11 @@ section a{
 }
 
 section a:hover{
-    background-color: rgba(0, 0, 0, 0.664);
+    background-color: rgba(13, 31, 189, 0.418);
+    transition: all .5s ease;
 }
+
+section a:hover::after
 
 
 footer{
@@ -145,12 +260,49 @@ footer{
 
 footer a{
     color: white;
+    text-decoration: none;
+}
+
+.anime{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
 }
 
 .footer__container{
     display: flex;
+    width: 100%;
+    background-color:#2f353a;
     justify-content: space-around;
     color: white;
+    height: 100px;
+    align-items: center;
+    position: relative;
+    height: 100px;
+}
+.footer__container a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 100px;
+    background-color: aqua;
+    transition: 0.25s ease-out;
+}
+
+.footer__container a:hover::after{
+    width: 100%;
+}
+
+.social__media{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.social__media img{
+    margin: 20px;
 }
 
 
@@ -168,82 +320,93 @@ footer a{
     .list__container .Logo{
         display: none;
     }
-    .list__container input{
-        margin-left: 10px;
-        margin-right: 10px;
-        background: transparent;
-        width: 300px;
-        margin: 10px;
-        cursor: text;
-        padding: 20px;
-    }
-
-    .list__container input #search{
-        border-radius: 25px;
-        border: 1px solid white;
-    }
-
-    .list__container.anime__list{
+    .SignIn{
+        border: none;
         display: none;
     }
-    .Naruto{
+
+    .home{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #Naruto{
         flex-wrap: wrap;
         display: grid;
         grid-template-rows: 100px 300px;
     }
-    .Naruto h2{
+    #Naruto h2{
         font-size: 2.5rem;
         padding: 20px;
     }
-    .Naruto p{
+    #Naruto p{
         margin-bottom: 20px;
         padding: 20px;
         display: none;
         text-align: center;
     }
 
-    .Bleach{
+    #Bleach{
         flex-wrap: wrap;
         display: grid;
         grid-template-rows: 100px 300px;
     }
 
-    .Bleach h2{
+    #Bleach h2{
         font-size: 2.5rem;
         padding: 20px;
     }
 
-    .Bleach p{
+    #Bleach p{
         margin-bottom: 20px;
         padding: 20px;
         display: none;
         text-align: center;
     }
 
-    .DragonBallZ{
+    #DragonBallZ{
         flex-wrap: wrap;
         display: grid;
         grid-template-rows: 100px 300px;
     }
 
-    .DragonBallZ p{
+    #DragonBallZ p{
         margin-bottom: 20px;
         padding: 20px;
         display: none;
         text-align: center;
     }
 
-    .JJK{
+    #JJK{
         flex-wrap: wrap;
         display: grid;
         grid-template-rows: 100px 300px;
     }
 
-    .JJK p{
+    #JJK p{
         margin-bottom: 20px;
         padding: 20px;
         display: none;
         text-align: center;
+    }
+
+    #Demon{
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-rows: 100px 300px;
+    }
+
+    #Demon p{
+        margin-bottom: 20px;
+        padding: 20px;
+        display: none;
+        text-align: center;
+    }
+    #Demon:hover{
+        cursor: pointer;
+        width: 400px;
+        opacity: 1;
+        filter: contrast(100%);
     }
 
     a{
@@ -254,8 +417,9 @@ footer a{
     footer{
         display: flex;
         flex-wrap: wrap;
-        padding: 30px;
+        padding: 20px;
     }
+    
 
 }
 
