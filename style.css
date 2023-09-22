@@ -272,6 +272,7 @@ footer a{
 .footer__container{
     display: flex;
     width: 100%;
+    padding: 20px;
     background-color:#2f353a;
     justify-content: space-around;
     color: white;
@@ -280,18 +281,20 @@ footer a{
     position: relative;
     height: 100px;
 }
-.footer__container a::after{
+.footer__container .anime a::after{
     content: "";
     position: absolute;
     height: 3px;
-    width: 100%;
+    width: 0;
     left: 0;
-    bottom: 100px;
+    bottom: 0;
+    right: 50%;
     background-color: aqua;
-    transition: 0.25s ease-out;
+    transition: all 0.5s ease-out;
+    will-change: width;
 }
 
-.footer__container a:hover::after{
+.footer__container .anime a:hover::after{
     width: 100%;
 }
 
@@ -369,6 +372,11 @@ footer a{
         display: grid;
         grid-template-rows: 100px 300px;
     }
+    #DragonBallZ a{
+        position: relative;
+        left: 80px;
+        width: 140px;
+    }
 
     #DragonBallZ p{
         margin-bottom: 20px;
@@ -383,6 +391,12 @@ footer a{
         grid-template-rows: 100px 300px;
     }
 
+    #JJK a{
+        position: relative;
+        left: 80px;
+        width: 140px;
+    }
+
     #JJK p{
         margin-bottom: 20px;
         padding: 20px;
@@ -395,6 +409,13 @@ footer a{
         display: grid;
         grid-template-rows: 100px 300px;
     }
+
+    #Demon a{
+        position: relative;
+        left: 80px;
+        width: 140px;
+    }
+
 
     #Demon p{
         margin-bottom: 20px;
@@ -427,16 +448,44 @@ footer a{
     .list__container{
         display: flex;
         justify-content: space-between;
-        padding: 30px;
+        padding: 90px;
     }
     .list__container input{
         background: transparent;
-        border: 1px solid grey;
-        border-radius: 5px;
+        border: 1px solid aqua;
+        border-radius: 15px;
         padding: 10px;
         cursor: text;
     }
+    #Naruto{
+        display: flex;
+        flex-direction: column ;
+        padding: 90px;
+        text-align: center;
+    }
 
+    #Naruto h2{
+        margin-bottom: 20px;
+    }
+
+    #Naruto p{
+        display: none;
+    }
+
+    #Bleach{
+        display: flex;
+        flex-direction: column ;
+        padding: 90px;
+        text-align: center;
+    }
+
+    #Bleach h2{
+        margin-bottom: 20px;
+    }
+
+    #Bleach p{
+        display: none;
+    }
 
 }
 
